@@ -1,6 +1,6 @@
 /**
  * The store class saves all the entered products into a primitive array.
- *
+ * EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
  * @author Siobhan Drohan, Mairead Meagher
  * @version 2.2
  */
