@@ -18,7 +18,7 @@ class ProductTest {
         //name 21 chars
         tv60Inches = new Product("Television 60 Inches", 5001, 245.99, false);
         //name 0 chars
-        noNameProduct = new Product("", 5000, 0, false);
+        noNameProduct = new Product(null, 5000, 0, false);
     }
 
     @AfterEach
@@ -51,12 +51,12 @@ class ProductTest {
             // Validation is: between 1000 and 5000 inclusive
 
             // Testing lower boundaries for product code, set at constructor level
-            assertEquals(999, tv42Inches.getProductCode());  // 999 is invalid - should default to 5000
+            assertEquals(5000, tv42Inches.getProductCode());  // 999 is invalid - should default to 5000
             assertEquals(1000, tv50Inches.getProductCode());  // 1000 is valid - value accepted
 
             //testing upper boundaries of product code, set at constructor level
             assertEquals(5000, noNameProduct.getProductCode()); // 5000 is valid - value accepted
-            assertEquals(5001, tv60Inches.getProductCode());    // 5001 is invalid - should default to 5000
+            assertEquals(5000, tv60Inches.getProductCode());    // 5001 is invalid - should default to 5000
         }
 
         @Test
